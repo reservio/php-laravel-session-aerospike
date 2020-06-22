@@ -1,0 +1,44 @@
+{
+  "name": "reservio/php-laravel-session-aerospike",
+  "description": "Aerospike session driver for Laravel",
+  "keywords": [
+    "aerospike",
+    "laravel",
+    "session"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tomáš Sýkora",
+      "email": "tomas@reservio.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "aerospike/aerospike-client-php": "^7.5",
+    "illuminate/support": "^7.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12.30"
+  },
+  "autoload": {
+    "psr-4": {
+      "Reservio\\Session\\Aerospike\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "vendor/aerospike/aerospike-client-php/doc/phpdoc"
+    ]
+  },
+  "scripts": {
+    "phpstan": "phpstan analyse src -l max"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Reservio\\Session\\Aerospike\\SessionServiceProvider"
+      ]
+    }
+  }
+}
