@@ -16,7 +16,7 @@
   "require": {
     "php": ">=7.4",
     "aerospike/aerospike-client-php": "^7.5",
-    "illuminate/support": "^7.0"
+    "illuminate/support": "^7.0|^8.0"
   },
   "require-dev": {
     "phpstan/phpstan": "^0.12.30"
